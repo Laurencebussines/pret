@@ -1,0 +1,2 @@
+console.log("Custom Cookie Script loaded");jQuery(document).ready(function($){function setCookie(lang){if(lang){var date=new Date();date.setTime(date.getTime()+(365*24*60*60*1000));var expires="; expires="+date.toUTCString();document.cookie="userLang="+lang+expires+"; path=/";}}
+$('.language-box').on('click',function(e){e.preventDefault();var lang=$(this).attr('id');setCookie(lang);window.location.href=$(this).attr('href');});var match=window.location.pathname.match(/^\/([a-z]{2})(\/|$)/);if(match&&match[1]){setCookie(match[1]);}});
